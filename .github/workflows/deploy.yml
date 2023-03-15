@@ -12,5 +12,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: deploy file
-        run: echo ${{ secrets.SSH_PRIVATE_KEY }} 
-        
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        with:
+            username: 'henrik'
+            server: '172.104.147.220'
+            ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }} 
+            local_path: './server.js'
+            remote_path: '/projects/testing'
