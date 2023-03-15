@@ -1,0 +1,16 @@
+name: Deploy to Linode
+on: 
+  push:
+    brances: main
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  deploy-to-Linode-via-ssh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: deploy file
+        uses: echo ${{ secrets.SSH_PRIVATE_KEY }} 
+        
