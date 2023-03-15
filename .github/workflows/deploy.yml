@@ -12,5 +12,5 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: deploy file
-        uses: echo ${{ secrets.SSH_PRIVATE_KEY }} 
+        run: echo ${{ secrets.SSH_PRIVATE_KEY }} 
         
