@@ -17,4 +17,5 @@ jobs:
             username: 'henrik'
             server: '172.104.147.220'
             ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }} 
-            run: ls -la
+            local_path: './server.js'
+            remote_path: 'projects/testing'
