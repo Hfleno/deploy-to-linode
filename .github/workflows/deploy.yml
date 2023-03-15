@@ -20,5 +20,5 @@ jobs:
             local_path: './server.js'
             remote_path: 'projects/testing'
       - name: Reload PM2
-        run: sudo pm2 restart server
+        run: ls -la
         
