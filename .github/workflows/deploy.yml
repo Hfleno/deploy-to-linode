@@ -19,5 +19,11 @@ jobs:
             ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }} 
             local_path: './server.js'
             remote_path: 'projects/testing'
-            script: sh restart.sh
+      - name: Restart PM2
+        uses: appleboy/ssh-action@v0.1.8
+        with:
+          host: '172.104.147.220'
+          username: 'henrik'
+          password: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: sh restart.sh
         
