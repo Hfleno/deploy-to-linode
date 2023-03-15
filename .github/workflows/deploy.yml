@@ -24,6 +24,6 @@ jobs:
         with:
           host: '172.104.147.220'
           username: 'henrik'
-          password: ${{ secrets.SSH_PRIVATE_KEY }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: sh restart.sh
         
