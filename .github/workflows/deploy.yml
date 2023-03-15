@@ -19,6 +19,6 @@ jobs:
             ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }} 
             local_path: './server.js'
             remote_path: 'projects/testing'
-            script: /
+            script: |
               export PATH=$PATH:/home/henrik/.nvm/versions/node/v18.14.2/bin
               pm2 restart server
