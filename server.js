@@ -4,7 +4,7 @@ const http = require("http")
 // Creating server
 const server = http.createServer((req, res) => {
     // Sending the response
-    res.write("This is deployed by github actions")
+    res.write("This is deployed by github actions.")
     res.end();
 })
 
