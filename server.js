@@ -28,7 +28,7 @@ const http = require('http')
 const server = http.createServer((req, res) => {
   // Sending the response
   res.write(
-    'This is deployed by github actions and restarted by PM2 via sh-script Hurra'
+    'This is deployed by github actions and restarted by PM2 via sh-script Hurra !!!'
   )
   res.end()
 })
